@@ -1,0 +1,17 @@
+<h1>出品商品一覧</h1>
+<ul>
+  <!--
+  <li><a href="/items/<%= @items[0].id %>"><%= @items[0].name %></a></li>
+  -->
+  
+  <!-- <% @items.each do |item| %>
+    <li><a href="/items/<%= item.id %>"><%= item.name %></a></li>
+  <% end %>
+  -->
+
+  <% @items.each do |item| %>
+    <li><%= link_to item.name, item %></li>
+  <% end %>
+</ul>
+
+<%= link_to "出品する" ,new_item_path %>
